@@ -16,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/floreabogdan/strapi-upload-minio.git"
+    "url": "git+https://github.com/alexanderkhivrych/strapi-upload-minio-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/floreabogdan/strapi-upload-minio/issues"
+    "url": "https://github.com/alexanderkhivrych/strapi-upload-minio-plugin/issues"
   },
-  "homepage": "https://github.com/floreabogdan/strapi-upload-minio#readme"
+  "homepage": "https://github.com/alexanderkhivrych/strapi-upload-minio-plugin#readme"
 }
