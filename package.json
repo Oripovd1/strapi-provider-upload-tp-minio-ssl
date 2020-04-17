@@ -1,18 +1,33 @@
 {
   "name": "strapi-provider-upload-tp-minio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MINIO provider for strapi upload",
   "main": "./lib",
   "directories": {
     "lib": "lib"
   },
+  "author": "Territory Embrace | Talentplatforms",
   "scripts": {
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Territory Embrace | Talentplatforms",
   "license": "MIT",
   "dependencies": {
     "minio": "^7.0.15"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.3",
+    "prettier": "^2.0.4",
+    "standard-version": "^7.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "repository": {
     "type": "git",
