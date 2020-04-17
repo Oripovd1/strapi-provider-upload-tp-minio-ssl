@@ -1,5 +1,5 @@
 {
-  "name": "strapi-upload-minio-plugin",
+  "name": "strapi-provider-upload-tp-minio",
   "version": "1.0.0",
   "description": "MINIO provider for strapi upload",
   "main": "./lib",
@@ -9,17 +9,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Alexander Khivrych",
+  "author": "Territory Embrace | Talentplatforms",
   "license": "MIT",
   "dependencies": {
-    "minio": "^7.0.1"
+    "minio": "^7.0.15"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexanderkhivrych/strapi-upload-minio-plugin.git"
+    "url": "https://github.com/talentplatforms/strapi-provider-upload-tp-minio.git"
   },
   "bugs": {
-    "url": "https://github.com/alexanderkhivrych/strapi-upload-minio-plugin/issues"
+    "url": "https://github.com/talentplatforms/strapi-provider-upload-tp-minio/issues"
   },
-  "homepage": "https://github.com/alexanderkhivrych/strapi-upload-minio-plugin#readme"
+  "homepage": "https://github.com/talentplatforms/strapi-provider-upload-tp-minio#readme"
 }

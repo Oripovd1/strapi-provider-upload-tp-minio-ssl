@@ -1,4 +1,4 @@
-# strapi-upload-minio
+# strapi-provider-upload-tp-minio
 
 This is unofficial plugin for minio servers. It is not production-ready! Use on your own risk!
 
