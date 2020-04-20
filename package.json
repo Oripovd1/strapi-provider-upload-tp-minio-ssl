@@ -6,6 +6,12 @@
   "directories": {
     "lib": "lib"
   },
+  "keywords": [
+    "strapi.io",
+    "upload",
+    "provider",
+    "minio"
+  ],
   "author": "Territory Embrace | Talentplatforms",
   "scripts": {
     "release": "standard-version",
