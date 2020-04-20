@@ -2,6 +2,8 @@
 
 This is unofficial plugin for minio servers. It is not production-ready! Use on your own risk!
 
+Currently broken.
+
 ## Resources
 
 - [MIT License](LICENSE.md)
