@@ -1,8 +1,10 @@
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
 # strapi-provider-upload-tp-minio
 
 This upload provider uses the [JavaScript Minio.Client](https://docs.min.io/docs/javascript-client-api-reference.html) to upload files to a (self hosted) instance of [Minio](https://min.io/).
 
-It's following the manual to create [upload providers](https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html#create-providers).
+It's compatible with the the strapi 3.1.1.
 
 **Notice**
 We currently use it in conjunction with Docker.
@@ -20,26 +22,33 @@ The following config settings are available:
 | Endpoint            | endPoint      | string                                        |
 | Port                | port          | string                                        |
 | SSL                 | useSSL        | string(true for ssl, anything else for false) |
+| Folder              | folder        | string                                        |
+| isDocker            | isDocker      | bool                                          |
+| Host                | host          | string                                        |
 
 ## Example Hash
 
-The resulting configuration hash should look like the following:
+The resulting configuration file should look like this:
 
 ```javascript
-const cfg = {
-  accessKey: 'minio',
-  secretKey: 'MySuperSafeSecretKeyAsAHashedValue',
-  bucket: 'my-bucket',
-  endPoint: 'minio.example.com',
-  port: 9000,
-  useSSL: true,
-};
+// File: ./config/plugins.js
 
-// if you are using Docker the endPoint needs to resemble the container name (or the service name) of your minio instance
-// ...
-// endPoint: 'minio',
-// useSSL: false,
-// ...
+module.exports = ({ env }) => ({
+  upload: {
+    provider: 'tp-minio',
+    providerOptions: {
+      accessKey: env('MINIO_ACCESS_KEY'),
+      secretKey: env('MINIO_SECRET_KEY'),
+      bucket: env('MINIO_BUCKET'),
+      endPoint: env('MINIO_ENDPOINT'),
+      port: parseInt(env('MINIO_PORT'), 10) || 9000,
+      useSSL: env('MINIO_USE_SSL') === 'true',
+      folder: 'cms',
+      isDocker: true,
+      host: env('MINIO_HOST'),
+    },
+  },
+});
 ```
 
 ## Resources
