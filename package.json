@@ -1,8 +1,11 @@
 {
-  "name": "strapi-provider-upload-tp-minio",
-  "version": "2.0.0",
-  "description": "MINIO provider for strapi upload",
+  "name": "strapi-provider-upload-tp-minio-ssl",
+  "version": "1.0.0",
+  "description": "MINIO provider for strapi upload with ssl",
   "main": "./lib",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "directories": {
     "lib": "lib"
   },
@@ -12,7 +15,7 @@
     "provider",
     "minio"
   ],
-  "author": "Territory Embrace | Talentplatforms",
+  "author": "Oripovd1",
   "scripts": {
     "release": "standard-version",
     "release:minor": "standard-version --release-as minor",
@@ -37,10 +40,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/talentplatforms/strapi-provider-upload-tp-minio.git"
+    "url": "https://github.com/oripovd1/strapi-provider-upload-tp-minio-ssl.git"
   },
   "bugs": {
-    "url": "https://github.com/talentplatforms/strapi-provider-upload-tp-minio/issues"
+    "url": "https://github.com/oripovd1/strapi-provider-upload-tp-minio-ssl/issues"
   },
-  "homepage": "https://github.com/talentplatforms/strapi-provider-upload-tp-minio#readme"
+  "homepage": "https://github.com/oripovd1/strapi-provider-upload-tp-minio-ssl#readme"
 }
